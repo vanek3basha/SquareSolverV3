@@ -1,0 +1,25 @@
+#ifndef TEST_HEADER_H_
+#define TEST_HEADER_H_
+#include <stdio.h>
+#include <math.h> 
+#include <string.h> 
+#include "SquareSolver.h"
+#define ONE_ROOT 1
+#define TWO_ROOT 2
+#define ZER0_ROOT 0
+#define INFINITY_ROOT -1
+
+
+
+struct test
+    {
+    struct koeficients unit;
+    double x1_test;
+    double x2_test;
+    int num_test;
+    };
+void unit_test();
+int admin_function();
+//struct koeficients scan_struct_test_function(double scan_a, double scan_b, double scan_c);
+void init_test(struct test library_unit_test);
+#endif
