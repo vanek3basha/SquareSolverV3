@@ -1,5 +1,13 @@
 #ifndef SQUARE_SOLVER_H_
 #define SQUARE_SOLVER_H_
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h> 
+#include <string.h>
+#define ONE_ROOT 1
+#define TWO_ROOT 2
+#define ZER0_ROOT 0
+#define INFINITY_ROOT -1
 struct koeficients
     {
     double a;
@@ -27,5 +35,5 @@ int line_solver_function(struct koeficients* library_line);
 double one_root_function(struct koeficients library_one_root);
 double first_root_function(struct koeficients library_first_root, double D_first_root);
 double second_root_function(struct koeficients library_second_root,double D_second_root);
-    
+
 #endif

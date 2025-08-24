@@ -4,8 +4,10 @@
 int admin_function()
     {
     char test;
-    printf("Press T for starting test\n");
+    printf("Press T for starting test or press any key for used square solver\n");
     test = getchar();
+    while(getchar() != '\n')
+        continue;
     if (test == 'T') {
         unit_test();
         return 0;

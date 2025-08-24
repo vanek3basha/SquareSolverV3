@@ -1,7 +1,7 @@
 #include "TestHeader.h"
 #include "SquareSolver.h" 
 #include "accert.h"
-#include <stdlib.h>
+
 
 void accert(int bool_char )
     {

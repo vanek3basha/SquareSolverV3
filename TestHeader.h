@@ -1,13 +1,7 @@
 #ifndef TEST_HEADER_H_
 #define TEST_HEADER_H_
-#include <stdio.h>
-#include <math.h> 
-#include <string.h> 
 #include "SquareSolver.h"
-#define ONE_ROOT 1
-#define TWO_ROOT 2
-#define ZER0_ROOT 0
-#define INFINITY_ROOT -1
+
 
 
 

@@ -4,6 +4,9 @@
 #include "TestHeader.h"
 #include "SquareSolver.h"                                                                        //библиотечки
 #include "accert.h"
+
+/*********************************************************************************************************************************************************/
+
 int main() 
     {
     struct koeficients library;                                                       // коофиценты и конечные ответы
@@ -17,7 +20,9 @@ int main()
         int number_of_roots = square_solver_function(&library);
         printing_function(number_of_roots, library);
         getchar();
-        pivko = getchar();   
+        pivko = getchar();
+        while(getchar() != '\n')
+            continue;  
         }
     printf("End\n");
     return 0;
