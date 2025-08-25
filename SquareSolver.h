@@ -8,6 +8,13 @@
 #define TWO_ROOT 2
 #define ZER0_ROOT 0
 #define INFINITY_ROOT -1
+#define ANSI_COLOR_RED "\x1b[31m"
+#define ANSI_COLOR_GREEN "\x1b[32m"
+#define ANSI_COLOR_YELLOW "\x1b[33m"
+#define ANSI_COLOR_BLUE "\x1b[34m"
+#define ANSI_COLOR_MAGENTA "\x1b[35m"
+#define ANSI_COLOR_CYAN "\x1b[36m"
+
 struct koeficients
     {
     double a;

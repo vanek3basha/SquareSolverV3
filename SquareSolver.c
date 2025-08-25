@@ -1,17 +1,21 @@
 #include "TestHeader.h"
 #include "SquareSolver.h"
 #include "accert.h" 
-
+#include "scantestdynamyc.h"
 void  starting_function(struct koeficients* library_start) 
     {
-    printf("Hello\n");
+    printf(ANSI_COLOR_CYAN "Hello\n");
     printf("Enter koefs for ax^2+bx+c\n");
     printf("Enter koef a: ");
+    printf(ANSI_COLOR_MAGENTA "");
     library_start->a = coefs_scan_and_fixer();
-    printf("\nEnter koef b: ");
+    printf(ANSI_COLOR_CYAN "\nEnter koef b: ");
+    printf(ANSI_COLOR_MAGENTA "");
     library_start->b = coefs_scan_and_fixer();
-    printf("\nEnter koef c: ");
+    printf(ANSI_COLOR_CYAN "\nEnter koef c: ");
+    printf(ANSI_COLOR_MAGENTA "");
     library_start->c = coefs_scan_and_fixer();
+    printf(ANSI_COLOR_CYAN "");
     }
 /*********************************************************************************************************************************************************/
 double coefs_scan_and_fixer() 
@@ -23,7 +27,8 @@ double coefs_scan_and_fixer()
     {
         while ((ch = getchar()) != '\n')
             putchar(ch); 
-        printf("\nError, enter number: ");
+        printf(ANSI_COLOR_CYAN "\nError, enter number: ");
+        printf(ANSI_COLOR_MAGENTA "");
     }
     
     return input;
@@ -46,6 +51,10 @@ int square_solver_function( struct koeficients* library_square)
             {                                                                       //проверка дискриминанта на знак
             library_square->x1 = first_root_function(*library_square, D);
             library_square->x2 = second_root_function(*library_square, D);
+            if  (library_square->x2 > library_square->x1){
+                library_square->x2 = first_root_function(*library_square, D);
+                library_square->x1 = second_root_function(*library_square, D);
+            }
             return TWO_ROOT;
             }
         
@@ -106,5 +115,6 @@ void printing_function(int number_of_koefs,struct koeficients library_printing)
                 printf("The equation has an infinite number of roots\n");
                 break;
         }
-    printf("For break press #,for continue press any key \n");    
+    printf("For break press #,for continue press any key \n");
+    printf(ANSI_COLOR_MAGENTA "");    
     }

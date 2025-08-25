@@ -4,7 +4,7 @@
 #include "TestHeader.h"
 #include "SquareSolver.h"                                                                        //библиотечки
 #include "accert.h"
-
+#include "scantestdynamyc.h"
 /*********************************************************************************************************************************************************/
 
 int main() 
@@ -21,10 +21,12 @@ int main()
         printing_function(number_of_roots, library);
         getchar();
         pivko = getchar();
+        while (pivko =='\n')
+            pivko = getchar();
         while(getchar() != '\n')
             continue;  
         }
-    printf("End\n");
+    printf(ANSI_COLOR_CYAN "End\n");
     return 0;
     }
 /*********************************************************************************************************************************************************/
