@@ -1,2 +1,3 @@
 all:
 	 gcc -DNDEBUG  main.c  SquareSolver.c TestHeader.c accert.c scantestdynamyc.c  -o SquareSolver
+	.\SquareSolver
