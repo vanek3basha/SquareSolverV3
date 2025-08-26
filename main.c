@@ -5,30 +5,38 @@
 #include "SquareSolver.h"                                                                        //библиотечки
 #include "accert.h"
 #include "scantestdynamyc.h"
-/*********************************************************************************************************************************************************/
-
+#include "is_zero.h"
+/*********************************************************************************************************************************************************///
+//getopts
 int main() 
     {
-    struct koeficients library;                                                       // коофиценты и конечные ответы
-    char pivko;
-    if (admin_function()==0)
+        struct koeficients library_main ={};                                                       // коофиценты и конечные ответы
+        int exit_for_circle = 'h';
+        if (admin_function()==0)
+            {
+                return 0;
+            }                                                                 //принимаем на ввод коэфы
+        while (exit_for_circle != '#')
+            {   
+                starting_function(&library_main);
+                int number_of_roots = square_solver_function(&library_main);
+                printing_function(number_of_roots, library_main);
+                getchar();
+                exit_for_circle = getchar();
+
+                while (exit_for_circle =='\n')
+                    {
+                        exit_for_circle = getchar();
+                    }
+                while(getchar() != '\n')
+                    {
+                        continue;
+                    }  
+            }
+
+        printf(ANSI_COLOR_CYAN "End\n");
+
+        printf("> end\n");
         return 0;
-    pivko = 'h';                                                                 //принимаем на ввод коэфы
-    while (pivko != '#')
-        {   
-        starting_function(&library);
-        int number_of_roots = square_solver_function(&library);
-        printing_function(number_of_roots, library);
-        getchar();
-        pivko = getchar();
-        while (pivko =='\n')
-            pivko = getchar();
-        while(getchar() != '\n')
-            continue;  
-        }
-    printf(ANSI_COLOR_CYAN "End\n");
-    return 0;
     }
 /*********************************************************************************************************************************************************/
-
-

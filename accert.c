@@ -3,6 +3,7 @@
 #include "accert.h"
 #include "scantestdynamyc.h"
 
+
 void accert(int bool_char )
     {
 #ifndef NDEBUG

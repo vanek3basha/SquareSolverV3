@@ -1,9 +1,9 @@
 #ifndef SQUARE_SOLVER_H_
 #define SQUARE_SOLVER_H_
-#include <stdlib.h>
 #include <stdio.h>
 #include <math.h> 
 #include <string.h>
+
 #define ONE_ROOT 1
 #define TWO_ROOT 2
 #define ZER0_ROOT 0
@@ -23,6 +23,7 @@ struct koeficients
     double x1;
     double x2;
     };
+
 void  starting_function(struct koeficients* library_start);
 /*********************************************************************************************************************************************************/
 //! \brief Solves quadratic equations of the form ax^2+bx+c=0
